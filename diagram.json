@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Corina Gherasim",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -86.55, "left": 53.36, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -155.23,
+      "left": 154.58,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -275.55,
+      "left": 379.55,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "uno:13", "led1:A", "gray", [ "v0" ] ],
+    [ "uno:GND.1", "led1:C", "black", [ "v0" ] ],
+    [ "uno:2", "pir1:OUT", "yellow", [ "v-49.69", "h97.59", "v0", "h46.34" ] ],
+    [ "uno:5V", "pir1:VCC", "red", [ "v32.33", "h201.12", "v-18.34" ] ],
+    [ "uno:GND.2", "pir1:GND", "black", [ "v54.53", "h211.89", "v-16.41" ] ]
+  ]
+}
